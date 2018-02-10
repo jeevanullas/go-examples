@@ -1,0 +1,10 @@
+version: 0.1
+os: linux
+files:
+  - source: webserver
+    destination: /home/ec2-user
+hooks:
+  ApplicationStart:
+    - location: code-deploy.sh  
+      timeout: 300
+      runas: root
